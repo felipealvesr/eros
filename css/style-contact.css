@@ -1,0 +1,546 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    background: #000;
+}
+h1{
+    font-weight: normal;
+}
+/********************global*******************/
+/*fonts*/
+@font-face {
+    font-family: 'Elegant-Icons';
+    src: url("../../font/ElegantIcons.ttf");
+}
+@font-face {
+    font-family: 'Poppins-Thin';
+    src: url("../../font/Poppins-Thin.ttf");
+}
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url("../../font/Poppins-Light.ttf");
+}
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url("../../font/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url("../../font/Poppins-Medium.ttf");
+}
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url("../../font/Poppins-SemiBold.ttf");
+}
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url("../../font/Poppins-Bold.ttf");
+}
+@font-face {
+    font-family: 'Outer-Regular';
+    src: url("../../font/OuterSans-Regular.otf");
+}
+@font-face {
+    font-family: 'Outer-Light';
+    src: url("../../font/OuterSans-Light.otf");
+}
+@font-face {
+    font-family: 'Outer-Thin';
+    src: url("../../font/OuterSans-Thin.otf");
+}
+@font-face {
+    font-family: 'Poppins-LightItalic';
+    src: url("../font/Poppins-LightItalic.ttf");
+}
+@font-face {
+    font-family: 'Poppins-ExtraLightItalic';
+    src: url("../font/Poppins-ExtraLightItalic.ttf");
+}
+/*end fonts*/
+section{
+    /*padding: 0 15%;*/
+}
+html{
+    overflow-x: hidden;
+}
+.flex{
+    display: flex;
+}
+.width-100{
+    width: 100%;
+}
+.width-50{
+    width: 50%;
+}
+.flex-align{
+    display: flex;
+    align-items: center;
+}
+h1{
+    color: white;
+}
+p{
+    color: white;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(0.90);
+    }
+    70% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.90);
+    }
+  }
+/*****************end global*****************/
+/*****************HEADER*********************/
+header{
+    background-color: black;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2% 0;
+    border-bottom: 1px solid #707070;
+    position: absolute;
+    z-index: 7;
+}
+.header-logo{
+    width: 30%;
+}
+.header-logo a img{
+    width: 100px;
+}
+.header-menu{
+}
+.header-menu a{
+    font-family: 'Poppins-Regular';
+    color: #707070;
+    margin: 0 15px;
+    font-size: 20px;
+}
+.header-menu a:hover{
+    color: white;
+}
+.active{
+    color: white !important;
+}
+.btn-price{
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 100px; 
+    transition: 0.2s;
+}
+.btn-price:hover{
+    background:blue;
+    transition: 0.2s;
+}
+/*menu media*/
+header{
+    background-color: black;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2% 0;
+    border-bottom: 1px solid #707070;
+    position:absolute;
+}
+#btn-mobile {
+    display: none;
+  }  
+
+@media (max-width: 900px) {
+    .header-menu {
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      top: 45px;
+      right: 0px;
+      background: black;
+      transition: 0.6s;
+      z-index: 7;
+      height: 0px;
+      visibility: hidden;
+      overflow-y: hidden;
+      text-align: center;
+    }
+    #nav.active .header-menu {
+      height: calc(100vh - 10px);
+      visibility: visible;
+      overflow-y: auto;
+    }
+    .header-menu li{
+      margin: 2% 0;
+    }
+    #btn-price{
+        margin-top: 18%;
+    }
+    .btn-price {
+        padding: 15px 40px;
+    }
+    #btn-mobile {
+    float: right;
+      display: flex;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      background: none;
+      color: white;
+      cursor: pointer;
+      gap: 0.5rem;
+    }
+    #arrow-click {
+      border-top: 2px solid;
+      width: 20px;
+    }
+    #arrow-click::after,
+    #arrow-click::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 5px;
+      transition: 0.3s;
+      position: relative;
+    }
+    #nav.active #arrow-click {
+      border-top-color: transparent;
+    }
+    #nav.active #arrow-click::before {
+      transform: rotate(135deg);
+    }
+    #nav.active #arrow-click::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+    /*responsive*/
+    .header-logo{
+        width: 40%;
+    }
+    header nav{
+        width: 40%;
+    }
+  }
+/*end menu media*/
+/****************END HEADER******************/
+/******************FOOTER********************/
+footer{
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+footer h1{
+    font-family: 'Poppins-Regular';
+    color: #707070;
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+}
+.footer-social{
+    justify-content: center;
+    padding-top: 2%;
+}
+.footer-social img{
+    margin: 0 10px;
+}
+#in{
+    width: 22px;
+}
+#fb{
+    width: 22px;
+}
+#ig{
+    width: 25px;
+}
+#be{
+    width: 30px;
+}
+/****************END FOOTER******************/
+.sec-banner{
+    width: 100%;
+    background-image: url("../img/background.webp");
+    padding: 0;
+    background-size: cover;
+    height: 100vh;
+}
+.banner-text{
+    width:50%;
+}
+.banner-text > *{
+   margin-left: 20%;
+}
+.banner-text h1{
+   font-family: 'Outer-Regular';
+   font-size: 40px;
+}
+.banner-text p{
+    font-family: 'Poppins-Light';
+    margin: 1% 0 6% 20%;
+}
+.banner-text img{
+    width: 6%;
+    margin-right: 2%;
+}
+.banner-img{
+    width: 60%;
+    height: 100%;
+    align-items: end;
+    display: flex;
+    justify-content: center;
+}
+.banner-img img{
+    width: 50%;
+}
+.btn-input{
+    width: 30%;
+    margin: 4% 0;
+}
+.banner-text a button, .btn-input{
+    background-color: white;
+    font-family: 'Poppins-LightItalic';
+    padding: 10px 50px;
+    font-size: 30px;
+    border: none;
+    color: black;
+    border-radius: 10px;
+    animation: pulse-white 2s infinite;
+    cursor:pointer;
+    transition:0.2s;
+}
+.btn-input{
+    width: 18%;
+}
+.banner-text a button:hover, .btn-input:hover{
+    background-color: blue;
+    color: white;
+}
+/*******************SEC FORM************************/
+.sec-form{
+ padding: 2% 5%;
+}
+#title-form{
+    font-family:'Poppins-Medium';color:white;
+    font-size: 40px;
+    }
+form{
+    flex-direction: column;
+}
+form label, h1{
+    font-family: 'Poppins-Light';
+    font-size: 20px;
+    color: white;
+    margin: 4% 0% 1%;
+}
+form input,  textarea{
+    color: white;
+    background-color: transparent;
+   border: none;
+    border-bottom: 1px solid #707070;
+    font-family: 'Poppins-Light';
+    padding: 10px 0 5px;
+    transition: 0.2s;
+}
+textarea:focus{
+   height: 200px;
+}
+fieldset{
+    border: none;
+    height: auto;
+    margin: 2% 0;
+}
+.custom-checkbox{
+    margin: 2% 0;
+}
+.custom-checkbox input{
+    display: none;
+}
+.custom-checkbox label{
+    font-family: 'Poppins-ExtraLightItalic';
+}
+.custom-checkbox input + label:before{
+    content: '';
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    border: 1px solid white;
+    background-color: black;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1%;
+    margin-bottom: 3px;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.custom-checkbox input:checked + label:before{
+    background:url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: blue;
+    background-position: center;
+    border: 1px solid blue;
+    transition: .2s ease-out;
+    background-size: 100%;
+}
+
+/******************END SEC FORM********************/
+/******************MEDIA SCREEN*******************/
+@media screen and (min-width:1700px) {
+    .header-menu a{
+        font-size: 30px;
+    }
+    /*end header*/
+    /*banner*/
+    .banner-text p{
+        font-size: 25px;
+    }
+    .banner-text h1 {
+        font-size: 50px;
+    }
+    .banner-text a button, .btn-input{
+        font-size: 40px;
+    }
+    /*end banner*/
+    /*form*/
+    form label, h1{
+        font-size: 25px;
+    }
+    form input, textarea{
+        font-size: 21px;
+    }
+    /*end form*/
+     /*footer*/
+     footer h1{
+        font-size: 21px;
+    }
+    #ig {
+        width: 35px;
+    }
+    #fb {
+        width: 30px;
+    }
+    #be {
+        width: 40px;
+    }
+    #in {
+        width: 28px;
+    }
+    /*end footer*/
+}
+@media screen and (max-width:1100px){
+    .btn-input{
+        width: 50%;
+    }
+    form label, h1 {
+        margin: 20% 0% 1%;
+        font-size: 22px;
+    }
+    #title-form{
+        margin: 10% 0 0%;
+    }
+    form input, textarea {
+        font-size: 20px;
+    }
+    .custom-checkbox input + label:before{
+        height: 40px;
+        width: 40px;
+    }
+    .banner-text h1{
+        margin: 0;
+    }
+}
+@media  screen and (max-width:900px){
+    /*solicitar*/
+    .sec-banner{
+        justify-content: center;
+    }
+    .banner-text{
+        width: 45%;
+    }
+    .banner-img{
+        width:45%;
+    }
+    .banner-img img {
+        width: 84%;
+    }
+    .banner-text{
+        text-align: center;
+    }
+    .banner-text > *{
+        margin: 0;
+        justify-content: center !important;
+    }
+    .banner-text p{
+        margin: 6% 0px 14%;
+    }
+    /*end solicitar*/
+}
+@media screen and (max-width:768px){
+    .btn-input{
+        width: 100%;
+        margin-top: 10%;
+    }
+}
+@media screen and (max-width:700px){
+    .sec-banner{
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .banner-text{
+        height: 45%;
+        width: 75%;
+    }
+    .banner-img{
+        height: 45%;
+    }
+    .banner-img img{
+        width: 190px;
+    }
+    .banner-text p {
+        margin: 5% 0px 7%;
+        font-size: 15px;
+    }
+    .banner-text a button, .btn-input{   
+        font-size: 23px;
+        padding: 10px 26px;
+    }
+    .banner-text {
+        height: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:580px){
+     /*orçamento*/
+     .banner-img img{
+        
+    }
+    /*end orçamento*/
+}
+@media screen and (max-width:480px) {
+    /*header*/
+    .header-logo a img{
+        width: 70px;
+    }
+    #title-form{
+        font-size: 25px;
+    }
+    form label{
+        font-size: 17px;
+    }
+    form input, textarea{
+        font-size: 15px;
+    }
+    .custom-checkbox {
+        margin: 12% 0;
+    }
+    .footer-social {
+        justify-content: center;
+        padding-top: 10%;
+    }
+    footer h1{
+        margin: 3% 0;  
+    }
+}

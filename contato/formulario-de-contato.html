@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style-contact.css">
+    <title>Orçamento</title>
+
+</head>
+<body>
+    <!--#region HEADER -->
+    <header style="position:static;" class="width-100 flex">
+        <div class="header-logo">
+            <a href=""><img src="../img/logo-white.webp" alt=""></a>
+        </div>
+        <nav id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="arrow-click"></span>
+            </button>
+            <ul class="header-menu flex-align" role="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../identidade-visual.html">Identidade Visual</a></li>
+                <li><a href="../sobre.html">Sobre Nós</a></li>
+                <li id="btn-price"><a class="btn-price" href="../contato/solicitar-orcamento.html">Orçamento</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--#endregion-->
+    <!--#region SEC-FORM-->
+    <section class="sec-form">
+        <h1 id="title-form">Proposta Comercial</h1>
+        <form class="flex" action="https://api.staticforms.xyz/submit" method="POST">
+            <input type="hidden" name="accessKey" value="d9c1dcf4-f6f4-4ca7-9a89-e5aabbb9b8b1">
+            <input type="hidden" name="redirectTo" value="http:erosagencia/contato/obrigado.html">
+            <label for="nome">1. Nome:</label>
+            <input class="input" type="text" id="nome" name="$Nome:" required>
+
+            <label for="e-mail">2. E-mail que você mais utiliza:</label>
+            <input type="text" name="$E-mail:" id="e-mail" required>
+
+            <label for="whats">3. WhatsApp (Com DDD)</label>
+            <input type="number" name="$Telefone:" id="whats" required>
+
+            <label for="nome-empresa">4. Nome da sua empresa</label>
+            <input type="text" name="$Nome da Empresa:" id="nome-empresa" required>
+
+            <label for="cidade-nome">5. Cidade e Estado</label>
+            <input type="text" name="$Cidade e Estado:" required id="cidade-nome">
+
+            <label for="insta">6. Instagram (Se Obter)</label>
+            <input type="text"  name="$Instagram:" id="insta">
+
+            <label for="site">7. Site da sua empresa (Se obter)</label>
+            <input type="text" name="$Site:" id="site">
+
+            <label for="objetivo">8. Quais os seus objetivos para esse projeto?</label>
+            <input type="text" name="$Objetivos para o projeto:" id="objetivo">
+
+            <fieldset>
+                <h1>9. Há quanto tempo sua empresa existe?</h1>
+                <div class="custom-checkbox">
+                    <input  type="checkbox" name="$Tempo de Empresa:" id="time01" value="Minha empresa ainda é um sonho">
+                    <label for="time01">Minha empresa ainda é um sonho</label>
+                </div>
+                  
+                <div class="custom-checkbox">
+                    <input  type="checkbox" name="$Tempo de Empresa:" id="time02" value="Menos de 1 (Estou começando)">
+                    <label for="time02">Menos de 1 (Estou começando)</label>
+                </div>
+                  
+                <div class="custom-checkbox">
+                    <input  type="checkbox" name="$Tempo de Empresa:" id="time03" value="Mais de 1 ano (Possuo alguns clientes)">
+                    <label for="time03">Mais de 1 ano (Possuo alguns clientes)</label>
+                </div>
+                  
+                <div class="custom-checkbox">
+                    <input  type="checkbox" name="$Tempo de Empresa:" id="time04" value="Mais de 5 anos (Possuo muitos clientes)">
+                    <label for="time04">Mais de 5 anos (Possuo muitos clientes)</label>
+                </div>
+                  
+                <div class="custom-checkbox">
+                    <input  type="checkbox" name="$Tempo de Empresa:" id="time05" value="10 ou + anos (Estabelecida no mercado)">
+                    <label for="time05">10 ou + anos (Estabelecida no mercado)</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <h1>10. Qual o seu tipo de negócio?</h2>
+                  
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="$Tipo de Negócio:" id="type01" value=" Marca">
+                    <label for="type01">Marca</label>
+                </div>
+                  
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="$Tipo de Negócio:" id="type02" value=" Serviço / Empresa">
+                    <label for="type02">Serviço / Empresa</label>
+                </div>
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="$Tipo de Negócio:" id="type03" value=" Linha de produtos">
+                    <label for="type03">Linha de produtos</label>
+                </div>
+                  
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="$Tipo de Negócio:" id="type04" value=" Bares / Restaurantes / Lanchonetes...">
+                    <label for="type04">Bares / Restaurantes / Lanchonetes...</label>
+                </div>
+                  
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="$Tipo de Negócio:5" id="type05" value=" Digital / Eletro / Eletrônicos...">
+                    <label for="type05">Digital / Eletro / Eletrônicos...</label>
+                </div>
+                  
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="$Tipo de Negócio:6" id="type06" value=" Outro">
+                    <label for="type06">Outro</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <h1>11. De quais itens sua empresa precisa? Além da logotipo</h1>
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="$Item:" id="item01" value=" Adesivo">
+                    <label for="item01">Adesivo</label>
+                </div>
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="$Item:" id="item02" value=" Cartão de visitas">
+                    <label for="item02">Cartão de visitas</label>
+                </div>
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="$Item:" id="item03" value=" Assinatura de e-mail">
+                    <label for="item03">Assinatura de e-mail</label>
+                </div>
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="$Item:" id="item04" value=" Papel timbrado">
+                    <label for="item04">Papel timbrado</label>
+                </div>
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="$Item:" id="item05" value=" Carimbo">
+                    <label for="item05">Carimbo</label>
+                </div>
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="$Item:" id="item06" value=" Brindes (Lápis, Caneca, Chaveiro)">
+                    <label for="item06">Brindes (Lápis, Caneca, Chaveiro)</label>
+                </div>
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="$Item:" id="item07" value=" Uniforme, Avental">
+                    <label for="item07">Uniforme, Avental</label>
+                </div>
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="$Item:" id="item08" value=" Outro">
+                    <label for="item08">Outro</label>
+                </div>
+            </fieldset>
+
+            <label for="information">12. Possui algo a mais que queira mencionar? Fique à vontade para inserir mais informações ;)</label>
+            <textarea name="$Detalhes e informações:" id="information"></textarea>
+            <input class="btn-input" type="submit" value="Enviar" />
+        </form>
+    </section>
+    <footer>
+        <h1>Agencia Eros - Agência de Design </h1>
+        <h1>CNPJ: XX. XXX. XXX/0001-XX.</h1>
+        <h1> R. Ver. Chico Filgueira, 21 - Caiçaras,<br>
+            Patos de Minas - MG, 38702-178</h1>
+        <h1>contato@erosagencia.com</h1>
+        <div class="footer-social flex-align">
+            <img id="ig" src="../img/icons/instagram.webp" alt="">
+            <img id="fb" src="../img/icons/facebook.webp" alt="">
+            <img id="be" src="../img/icons/behance.webp" alt="">
+            <img id="in" src="../img/icons/linkedin.webp" alt="">
+        </div>
+    </footer>
+    <!--#endregion-->
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/menu.js"></script>
+</body>
+</html>
